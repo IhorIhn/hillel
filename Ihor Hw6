@@ -1,0 +1,76 @@
+Task1
+let i = 0;
+
+while (i < 8) {
+  console.log(`число - ` + i);
+  i++;
+}
+
+
+====
+Task2
+1) let sumFor = 0;
+
+for (let i = 0; i <= 50; i++) {
+  if (i % 3 !== 0) {
+    sumFor += i;
+  }
+}
+
+console.log("Sum using for loop:", sumFor);
+
+2) let sumWhile = 0;
+let j = 0;
+
+while (j <= 50) {
+  if (j % 3 !== 0) {
+    sumWhile += j;
+  }
+  j++;
+}
+
+console.log("Sum using while loop:", sumWhile);
+
+3) let sumDoWhile = 0;
+let k = 0;
+
+do {
+  if (k % 3 !== 0) {
+    sumDoWhile += k;
+  }
+  k++;
+} while (k <= 50);
+
+console.log("Sum using do...while loop:", sumDoWhile);
+
+
+Task3
+
+
+let firstNumber = -100;
+let secondNumber = 250;
+let sum = 0;
+
+for (let i = firstNumber; i <= secondNumber; i++) {
+  sum += i;
+}
+
+console.log(`Sum of numbers from ${firstNumber} to ${secondNumber}: ${sum}`);
+
+
+
+Task4
+for (let seconds = 10; seconds >= 0; seconds--) {
+  console.log(`${seconds} second${seconds !== 1 ? 's' : ''} left`);
+}
+console.log("Time is over");
+
+Task5
+
+for (let i = 7; i <= 49; i += 7) {
+  console.log(i);
+}
+
+
+Task6 
+
