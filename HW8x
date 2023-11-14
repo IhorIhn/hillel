@@ -1,0 +1,44 @@
+Task 2:
+
+function checkProbabilityTheory(count) {
+    let evenCount = 0;
+
+    for (let i = 0; i < count; i++) {
+        const randomNumber = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+        evenCount += randomNumber % 2 === 0;
+    }
+
+    const oddCount = count - evenCount;
+    const evenPercentage = (evenCount / count) * 100;
+    const oddPercentage = 100 - evenPercentage;
+
+    console.log(`
+        Кількість згенерованих чисел: ${count}
+        Парних чисел: ${evenCount}
+        Не парних чисел: ${oddCount}
+        Відсоток парних до не парних: ${evenPercentage.toFixed(2)}% : ${oddPercentage.toFixed(2)}%
+        ${Math.abs(evenPercentage - 50) < 5 && Math.abs(oddPercentage - 50) < 5 ? 'Відсоткове співвідношення близьке до 50%50' : 'Відсоткове співвідношення не є близьким до 50%50'}
+    `);
+}
+
+// Приклад виклику функції з параметром count = 1000
+checkProbabilityTheory(1000);
+
+Task 3:
+
+function pad(str, char, count, addToStart) {
+    const currentLength = str.length;
+
+    if (count <= 0 || count <= currentLength) {
+        return str;
+    }
+
+    const padding = char.repeat(count - currentLength);
+
+    return addToStart ? padding + str : str + padding;
+}
+const result1 = pad('qwerty', '+', 3, true);
+console.log(result1);  // +++qwerty
+
+const result2 = pad('qwerty', '+', 8, false);
+console.log(result2);  // qwerty++
