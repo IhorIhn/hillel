@@ -1,0 +1,53 @@
+Task1:
+
+// Створення об'єкта "Людина"
+let person = {
+  year: 1990,
+  firstName: 'Олена',
+  lastName: 'Теліга',
+  getInfo: function() {
+    for (let key in this) {
+      if (typeof this[key] !== 'function') {
+        console.log(`${key}: ${this[key]}`);
+      }
+    }
+  },
+  getFullName: function() {
+    console.log(`Повне ім'я: ${this.firstName} ${this.lastName}`);
+  }
+};
+
+// Виведення інформації та повного імені
+person.getInfo();
+person.getFullName();
+
+==============================================
+
+Task2
+
+function isARobot(object) {
+    return object.hasOwnProperty('batteryEnergy');
+  }
+  
+  // Приклади об'єктів
+  let robot1 = {
+    batteryEnergy: 100,
+    name: 'Робот 1'
+  };
+  
+  let human = {
+    name: 'Олена'
+  };
+  
+  let robot2 = {
+    batteryEnergy: 50,
+    model: 'SpaceX'
+  };
+  
+  // Перевірка чи є об'єкти роботами
+  console.log(isARobot(robot1)); // Повинно повернути true
+  console.log(isARobot(human)); // Повинно повернути false
+  console.log(isARobot(robot2)); // Повинно повернути true
+  
+===============================================
+
