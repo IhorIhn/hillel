@@ -1,0 +1,41 @@
+1.
+
+let array1 = ['елемент1', 'елемент2', 'елемент3', 'елемент4', 'елемент5'];
+
+function getSecondElement(arr) {
+
+  if (arr.length >= 2) {
+    return arr[1]; // Повертаємо другий елемент (індекс 1)
+  } else {
+    return "Масив має менше двох елементів";
+  }
+}
+
+let secondElement = getSecondElement(array1);
+console.log("Другий елемент масиву:", secondElement);
+
+2. 
+Попередній масив з 5 елементів
+let array1 = ['елемент1', 'елемент2', 'елемент3', 'елемент4', 'елемент5'];
+
+
+function addElementToArray(arr, newItem) {
+  arr.push(newItem); // Додаємо новий елемент до кінця масиву
+}
+addElementToArray(array1, 'новий елемент');
+console.log("Оновлений масив:", array1);
+
+3. 
+
+let array1 = ['елемент1', 'елемент2', 'елемент3', 'елемент4', 'елемент5'];
+let array2 = ['елементA', 'елементB', 'елементC', 'елементD', 'елементE'];
+
+function mergeArrays(arr1, arr2) {
+  let mergedArray = arr1.concat(arr2); // Об'єднуємо масиви за допомогою методу concat()
+  return mergedArray; // Повертаємо об'єднаний масив
+}
+
+let combinedArray = mergeArrays(array1, array2);
+
+console.log("Об'єднаний масив:", combinedArray);
+
