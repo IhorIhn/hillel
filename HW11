@@ -1,0 +1,12 @@
+Task1:
+/(?=^[^Aa]{6,}$).*/
+
+Task2: 
+\b(?:cat|can)\b(?!r\b)
+
+
+Task 3:
+\d+\s*cups?\s*(?=of\scoffee)
+
+Task 4
+\b[hH]\w*\b
